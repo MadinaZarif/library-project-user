@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="init db" author="author name">
+        <sql>
+
+
+            CREATE TABLE users (
+            id BIGSERIAL PRIMARY KEY,
+            username VARCHAR(50) NOT NULL,
+            password VARCHAR(100) NOT NULL,
+            email VARCHAR(100) NOT NULL
+            );
+
+            INSERT INTO users(id, username, password, email) values
+            (1, 'Max', 'user', 'max@gmail.ru'),
+            (2, 'Alex', 'user', 'alex@gmail.ru'),
+            (3, 'Rokki', 'user', 'rokki@gmail.ru');
+
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>
